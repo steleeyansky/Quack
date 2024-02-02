@@ -1,0 +1,21 @@
+{
+    "name": "quack/form",
+    "description": "A WordPress plugin for submitting a form, sending an email, and generating a downloadable PDF certificate.",
+    "autoload": {
+        "psr-4": {
+            "Quack\\Form\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Slyubenov",
+            "email": "st.lyubenov@protonmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    }
+}

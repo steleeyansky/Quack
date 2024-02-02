@@ -30,8 +30,7 @@ class FormSubmissionController {
                     $pdfUrl = $uploadDir['baseurl'] . '/' . $pdfPath; 
                     $entryId = $this->repository->insert($formData);
                     if ($entryId) {
-                        $downloadLink = $this->createDownloadLink($pdfUrl); 
-                        $this->mailer->sendCertificateEmail($formData['email'], $downloadLink);
+                        $this->mailer->sendCertificateEmail($formData['email'], $pdfUrl);
                     } else {
                         throw new Exception('Failed to save form data.');
                     }
@@ -47,8 +46,4 @@ class FormSubmissionController {
         }
     }
 
-    private function createDownloadLink($pdfUrl) {
-       
-        return $pdfUrl;
-    }
 }

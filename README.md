@@ -35,8 +35,8 @@ Ensure that your WordPress site is configured with a working SMTP or mail server
 
 ### Shortcodes
 
-#### [quack_form]
-- Add the shortcode `[quack_form]` to any page or post to display the form.
+#### [quackform_form]
+- Add the shortcode `[quackform_form]` to any page or post to display the form.
 - Users can fill in their details, and upon submission, a certificate is generated and emailed.
 
 ## Features

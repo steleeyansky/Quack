@@ -1,25 +1,51 @@
-<form id="quackform-form" action="" method="post">
-    <p>
-        <label for="quackform-email">Email:</label>
-        <input type="email" id="quackform-email" name="email" required>
-    </p>
-    <p>
-        <label for="quackform-first-name">First Name:</label>
-        <input type="text" id="quackform-first-name" name="first_name" required>
-    </p>
-    <p>
-        <label for="quackform-last-name">Last Name:</label>
-        <input type="text" id="quackform-last-name" name="last_name" required>
-    </p>
-    <p>
-        <label for="quackform-date-of-birth">Date of Birth:</label>
-        <input type="date" id="quackform-date-of-birth" name="date_of_birth" required>
-    </p>
-    <p>
-        <label for="quackform-phone-number">Phone Number:</label>
-        <input type="tel" id="quackform-phone-number" name="phone_number" required>
-    </p>
-    <p>
-        <input type="submit" value="Submit">
-    </p>
+<form id="quackform-form" action="" method="post" novalidate>
+    <div class="form-field">
+        <label for="quackform-email">
+            <?php _e('Email:', QUACK_FORM_TEXTDOMAIN); ?>
+        </label>
+
+        <input type="email" class="form-input" name="email" required>
+
+        <span class="error-message" style="display:none;"></span>
+    </div>
+    <div class="form-field">
+        <label for="quackform-first-name">
+            <?php _e('First Name:', QUACK_FORM_TEXTDOMAIN); ?>
+        </label>
+
+        <input type="text" class="form-input" name="first_name" required>
+
+        <span class="error-message" style="display:none;"></span>
+    </div>
+    <div class="form-field">
+        <label for="quackform-last-name">
+            <?php _e('Last Name:', QUACK_FORM_TEXTDOMAIN); ?>
+        </label>
+
+        <input type="text" class="form-input" id="quackform-last-name" name="last_name" required>
+
+        <span class="error-message" style="display:none;"></span>
+    </div>
+    <div class="form-field">
+        <label for="quackform-date-of-birth">
+            <?php _e('Date of Birth:', QUACK_FORM_TEXTDOMAIN); ?>
+        </label>
+
+        <input type="date" class="form-input" id="quackform-date-of-birth" name="date_of_birth" required>
+
+        <span class="error-message" style="display:none;"></span>
+    </div>
+    <div class="form-field">
+        <label for="quackform-phone-number">
+            <?php _e('Phone Number:', QUACK_FORM_TEXTDOMAIN); ?>
+        </label>
+
+        <input type="tel" class="form-input" id="quackform-phone-number" name="phone_number" required>
+
+        <span class="error-message" style="display:none;"></span>
+    </div>
+
+    <div class="form-field">
+        <input type="submit" class="form-input" value="Submit">
+    </div>
 </form>

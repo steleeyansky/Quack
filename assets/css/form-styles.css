@@ -1,0 +1,61 @@
+#quackform-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="date"],
+.form-field input[type="tel"],
+.form-field input[type="submit"] {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-input[type="submit"] {
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px auto; 
+    display: block; 
+}
+
+.form-input[type="submit"] {
+    width: 200px !important; 
+}
+
+.form-field input[type="submit"]:hover {
+    background-color: #005177;
+}
+
+
+@media (max-width: 768px) {
+    #quackform-form {
+        padding: 10px;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    display: none; 
+}

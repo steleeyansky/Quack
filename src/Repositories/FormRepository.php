@@ -35,12 +35,34 @@ class FormRepository
     public function get_all()
     {
         $results = $this->wpdb->get_results(
-            "SELECT * from {$this->full_table_name}", ARRAY_A
+            "SELECT * from {$this->full_table_name}",
+            ARRAY_A
         );
 
         return $results;
-        
     }
+
+    public function insert($data)
+    {
+        $inserted = $this->wpdb->insert(
+            $this->full_table_name,
+            [
+                'email' => $data['email'],
+                'first_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
+                'date_of_birth' => $data['date_of_birth'],
+                'phone_number' => $data['phone_number']
+            ],
+            ['%s', '%s', '%s', '%s', '%s']
+        );
+
+        if ($inserted) {
+            return $this->wpdb->insert_id;
+        } else {
+            return false;
+        }
+    }
+
 
     public function delete(int $id)
     {
@@ -50,5 +72,4 @@ class FormRepository
             ['%d']
         );
     }
-
 }

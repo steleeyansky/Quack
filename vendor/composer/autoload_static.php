@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit59136e98496ea0a96d2bfffb729d469a
+class ComposerStaticInit9012765ba2a6b99267c31a6f71b04746
 {
     public static $files = array (
         'cdd849cd9d15dbd35ce5bf7c1b4c44b4' => __DIR__ . '/../..' . '/src/helpers.php',
@@ -26,14 +26,28 @@ class ComposerStaticInit59136e98496ea0a96d2bfffb729d469a
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Datamatrix' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/datamatrix.php',
+        'PDF417' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/pdf417.php',
+        'QRcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/qrcode.php',
+        'TCPDF' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf.php',
+        'TCPDF2DBarcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_barcodes_2d.php',
+        'TCPDFBarcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_barcodes_1d.php',
+        'TCPDF_COLORS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_colors.php',
+        'TCPDF_FILTERS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_filters.php',
+        'TCPDF_FONTS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_fonts.php',
+        'TCPDF_FONT_DATA' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_font_data.php',
+        'TCPDF_IMAGES' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_images.php',
+        'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
+        'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
+        'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit59136e98496ea0a96d2bfffb729d469a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit59136e98496ea0a96d2bfffb729d469a::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit59136e98496ea0a96d2bfffb729d469a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9012765ba2a6b99267c31a6f71b04746::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9012765ba2a6b99267c31a6f71b04746::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit9012765ba2a6b99267c31a6f71b04746::$classMap;
 
         }, null, ClassLoader::class);
     }
